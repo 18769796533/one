@@ -1,0 +1,932 @@
+body{
+    background: #f3f3f3;
+    font-family: "微软雅黑";
+}
+/* 版心 */
+/* ----------------------------------------------- */
+.margin{
+    width:1200px;
+    margin: 0 auto;
+}
+/* 右边栏 */
+/* ----------------------------------------------- */
+.rightNav{
+    width:44px;
+    height: 100%;
+    border-right: 1px solid #909090;
+    border-left: 1px solid #909090;
+    background: #000;
+    position: fixed;
+    right: 0;
+    top:0;
+    text-align: center;
+    z-index: 999;
+}
+.rightNav ul{
+    width:100%;
+    text-align: center;
+}
+
+.rightNav ul li{
+    text-align: center;    
+}
+.rightNav ul li a{
+    display: block;
+    width: 20px;
+    color:#fff;
+    font-size: 16px;
+    text-align: center;
+    margin: 0 auto;
+    padding: 10px 0;
+    border-bottom:1px solid rgb(114, 38, 38);
+}
+.rightNav ul li i{
+    display: block;
+    width:30px;
+    height: 15px;
+    border-radius: 8px;
+    background: orangered;
+    margin: 0 auto;
+    color: #fff
+}
+.rightNav ul li:hover{
+    background: #00bbd7;
+}
+/* 顶部导航 */
+/* ----------------------------------------------- */
+.topNav{
+    width: 100%;
+    height:44px;
+    position: relative;
+    top: 0;
+    left: 0;
+    background: #f0f0f0;
+    color: #666666;
+    font: 14px/44px "";
+}
+.i1{
+    float: left;
+    width:24px;
+    height:44px;
+    background: url("../images/x1.png") no-repeat center;
+    
+}
+.topNav span{
+    padding-left: 10px;
+    float: left;
+}
+.topNav ul{
+    float: right;
+}
+.topNav ul li{
+    float: left;
+    padding: 0 10px;
+}
+
+.topNav ul li i{
+    color:orange;
+    font-weight: bold;
+}
+/* LOGO+搜索 */
+/* -------------------------------------------------------- */
+.logoNav{
+    height: 70px;
+    padding: 30px 0 20px 0;
+    background: #fff;
+}
+.logo{
+    float: left;
+    padding-right: 56px;
+    
+}
+.btna{
+    float: left;
+    border: 1px solid #cccccc;
+}
+.btna i{
+    float: left;
+    width: 40px;
+    height:40px;
+    background: url("../images/x2.png") no-repeat center;
+}
+#sousuo{
+    width: 600px;
+    height: 40px;
+    border: none;
+}
+.btns{
+    float: right;
+    
+}
+.btns a{
+    float: left;
+    width: 65px;
+    height: 40px;
+    font-size: 16px;
+    color:#fff;
+    background: #fc3538;
+    margin-right: 10px;
+    text-align: center;
+    line-height: 40px;
+}
+.btns a:nth-child(2){
+    width: 63px;
+    height:38px;
+    border: 1px solid #ccc;
+    background: #fff;
+    color: #616161;
+}
+#btn{
+    width:128px;
+    height: 42px;
+    background: #00bbd7;
+    float: left;
+    border: none;
+    font-size: 16px;
+    color:#fff;
+    cursor: pointer;
+}
+
+#shop{
+    float: right;
+    width:42px;
+    height: 42px;
+    border: 1px solid #ccc;
+    background: url("../images/x3.png") no-repeat center;
+}
+.hots{
+    float: left;
+    line-height: 25px;
+    color: #666666;
+}
+.hots a{
+    color: #959595;
+    font-size: 12px;    
+}
+.fg{
+    color: #959595;
+}
+/* 导航条 */
+/* ----------------------------------------------- */
+.nav{
+    height:40px;
+    background: #33353d;
+
+}
+.navdw{
+    position: relative;
+}
+.navbox{
+    float: left;
+    width: 200px;
+}
+.navbox span{
+    font-size: 14px;
+    font-weight: bold;
+    width: 150px;
+    line-height: 40px;
+    color: #fff;
+    display: inline-block;
+    background: #191a1e;
+    padding: 0 20px 0 30px;
+}
+.navbox span i{
+    float: right;
+    color:#00BBD7;
+}
+.navbox ul{
+    display: none;
+    position: absolute;
+    left: 0;
+    border-top:1px solid #d7d7d9;
+    border-bottom: 1px solid #d7d7d9;
+    z-index: 999;
+}
+.navbox ul li{
+    width:170px;
+    height: 42px;
+    font: 15px / 42px "";
+    color: #333;
+    display: block;
+    background: #d7d7d9;
+    padding: 0 10px 0 20px;
+}
+.navbox ul li .lb1{
+    float: left;
+}
+
+.navbox ul li .lb1 i{
+    float: left;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color: #333;
+}
+.lb1 .lbimg2{
+    display: none;
+}
+.navbox2 ul{
+    float: left;
+}
+.navbox2 ul li{
+    float: left;
+}
+.navbox2 ul li a{
+    line-height: 40px;
+    color: white;
+    display: block;
+    padding: 0 20px;
+    font-size: 14px;
+}
+.navbox ul li .nav_b{
+    display: none;
+    position: absolute;
+    top: -1px;
+    left: 200px;
+    width: 754px;
+    height: 370px;
+    background-color: white;
+    border-right: 1px solid #c1c1c1;
+    padding: 10px 10px 0 10px;
+}
+.navbox2 ul li:nth-child(1) a{
+    background: #00BBD7;
+}
+.nav_b .imgbox{
+    padding-left: 10px;
+    float: left;
+}
+.nav_b img{
+    width: 202px;
+    padding-right: 35px;
+}
+.nav_b3 div{
+    float: left;
+    padding-left: 20px;
+    height: 280px;
+}
+.nav_b3 div h4{
+    width: 210px;
+    
+    line-height: 31px;
+    border-bottom: 1px solid #ccc;
+}
+.nav_b3 div h4 a{
+    color: #000;
+}
+.nav_b3 div p{
+    width: 210px;
+    line-height: 30px;
+    
+}
+
+.ban{
+    width: 100%;
+    height: 380px;
+    overflow: hidden;
+    position: relative;
+}
+.imgbox div{
+    height: 380px;
+    width: 100%;
+    position: absolute;
+    left: 100%;
+    
+}
+.imgbox div:nth-child(1){
+    left: 0;
+}
+.b1{
+    background: url("../images/b1.jpg") center;
+}
+.b2{
+    background: url("../images/b2.jpg") center;
+}
+.b3{
+    background: url("../images/b3.jpg") center;
+}
+.b4{
+    background: url("../images/b4.jpg") center;
+}
+.b5{
+    background: url("../images/b5.jpg") center;
+}
+.b6{
+    background: url("../images/b6.jpg") center;
+}
+.b7{
+    background: url("../images/b7.jpg") center;
+}
+.b8{
+    background: url("../images/b8.jpg") center;
+}
+.imgbtns{
+    position: relative;
+    height: 380px;
+}
+
+.imgbtns input{
+    width:20px;
+    height:50px;
+    border:none
+    ;background:#919191;
+    position: absolute;
+    top:50%;
+    margin-top:-25px;
+}
+#left{
+    left:-50px;
+    background: url("../images/btn3.png")
+}
+#right{
+    right:-50px;
+    background: url("../images/btn4.png")
+}
+.goods{
+    padding:20px 0 80px 0; 
+}
+.goodsbox1,.goodsbox2{
+    border-bottom:1px solid #e8e8e8;
+}
+.goods_b p{
+    float: left;
+    line-height: 25px;
+    color: #919191;
+    border-bottom: 1px solid #9c9c9c;
+}
+.goods_d2{
+    float: right;
+}
+.goods_d2 a{
+    font-size: 14px;
+    line-height: 22px;
+    padding-left: 40px;
+}
+.goodsList{
+    padding: 10px;
+    position: relative;
+}
+.goodsList p{
+    width: 1212px;
+    height: 760px;
+}
+.goodsList ul{
+    width: 1212px;
+    position: absolute;
+}
+.goodsList ul li{
+    width: 290px;
+    height: 350px;
+    background-color: #fff;
+    padding-top: 20px;
+    float: left;
+    margin-right: 13px;
+    margin-bottom: 10px;
+}
+
+
+
+.goodsList ul li div{
+    padding: 0 10px;
+    width: 270px;
+    text-align: center;
+}
+.goodsList ul li img{
+    width: 215px;
+    height:215px;
+    padding-bottom:10px;
+}
+.goodsList ul li h4{
+    width: 100%;
+    clear: both;
+    font-size: 14px;
+    color: #313131;
+    font-weight: 400;
+    text-align: left;
+    height: 39px;
+    padding-top:10px;  
+    overflow: hidden;  
+}
+.goodsList ul li p{
+    text-align: left;
+    font-size: 13px;
+    color: #aeaeae;
+    padding-top: 5px;
+    height: 20px;
+    
+}
+.goodsList ul li em{
+    display: block;
+    color: #fc3538;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: left;
+    font-weight: 600;
+    padding-top: 10px;
+}
+.goodsList .sylist1{
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.goodsbox3,.goodsbox4,.goodsbox5{
+    padding-top:30px;
+}
+.tt{
+    height:1px;
+    background: #e8e8e8
+}
+.fxbox_l{
+    width:600px;
+    float: left;
+}
+.fxbox .fxbox_l img{
+    display: block;
+    float: left;
+}
+.fxbox_l img:nth-child(1){
+    padding-bottom:10px;
+}
+.fxbox_l i{
+    float: left;
+    height: 230px;
+    width: 10px;
+}
+.fxbox_r{
+    width:590px;
+    padding-left: 10px;
+    float: right;
+}
+.fxbox_r i{
+    float: left;
+    height: 191px;
+    width: 9px;
+}
+.fxbox .fxbox_r img{
+    display: block;
+    float: left;
+}
+.fxbox_r a:nth-child(4) img{
+    padding: 10px 0 9px 0;
+}
+.fxbox img{
+    padding-top:10px; 
+}
+/* 重复代码 */
+
+.mbox_l{
+    width:600px;
+    float: left;
+    
+}
+.mbox .mbox_l img{
+    display: block;
+    float: left;
+}
+.mbox_l img:nth-child(1){
+    padding-bottom:10px;
+}
+.mbox_l i{
+    float: left;
+    height: 230px;
+    width: 10px;
+}
+.mbox_r{
+    width:590px;
+    padding-left: 10px;
+    float: right;
+}
+.mbox_r i{
+    float: left;
+    height: 191px;
+    width: 10px;
+}
+.mbox .mbox_r a img{
+    display: block;
+    float: left;
+}
+.mbox_r a:nth-child(4) img{
+    padding: 10px 0 9px 0;
+    
+} 
+.mbox img{
+    padding-top:10px; 
+}
+/* 重复代码box5 */
+/* ------------------------------------------------------- */
+.jbox_l{
+    width:600px;
+    float: left;
+}
+.jbox .jbox_l img{
+    display: block;
+    float: left;
+}
+.jbox_l img:nth-child(1){
+    padding-bottom:10px;
+}
+.jbox_l i{
+    float: left;
+    height: 230px;
+    width: 10px;
+}
+.jbox_r{
+    width:590px;
+    padding-left: 10px;
+    float: right;
+}
+.jbox_r i{
+    float: left;
+    height: 191px;
+    width: 10px;
+}
+.jbox .jbox_r a img{
+    display: block;
+    float: left;
+}
+.jbox_r a:nth-child(4) img{
+    padding: 10px 0 9px 0;
+    
+} 
+.jbox img{
+    padding-top:10px; 
+}
+/* 味 */
+/* ------------------------------------------------------ */
+.wbox img{
+    padding: 10px 0;
+}
+.wbox .wbox_l{
+    width: 585px;
+    float: left;
+    padding-right: 15px;
+}
+.wbox .wbox_r{
+    width: 585px;
+    float: right;
+    padding-left: 15px;
+}
+/* 特价 */
+/* -------------------------------------------------- */
+.goods_d2 input{
+    width: 30px;
+    height: 25px;
+    border: none;
+}
+#tjbtn1{
+    background: url("../images/btn1.jpg")
+}
+#tjbtn2{
+    background: url("../images/btn2.jpg")
+}
+.goodsbox6 ul{
+    width: 1210px;
+}
+.goodsbox6 ul li{
+    width: 232px;
+    height: 320px;
+    margin-right: 10px;
+    background: #fff;
+    text-align: center;
+    padding-top:20px;
+    float: left;
+}
+.tjgoods img{
+    width: 215px;
+    height: 215px;
+    padding-bottom: 10px;
+}
+.tjgoods h4{
+    width: 100%;
+    clear: both;
+    font-size: 14px;
+    color: #313131;
+    font-weight: 400;
+    overflow: hidden;
+    text-align: center;
+    height: 39px;    
+}
+.price{
+    color: #fc3538;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: left;
+    font-weight: 600;
+    margin-top: 10px;
+    float: left;
+}
+.tjgoods span{
+    color: #999;
+    font-size: 12px;
+    float: left;
+    margin-left: 12px;
+    line-height: 20px;
+    margin-top: 10px;
+    text-decoration: line-through;
+}
+/* 底部vip */
+/* -------------------------------------------------- */
+.bvip{
+    background-color: #eff1f0;
+    height: 100px;
+    line-height: 100px;
+    font-size: 16px;
+    color: #313131;
+    font-weight: 100;
+}
+.vipbox{
+    width: 215px;
+    float: left;
+}
+.vipbox img{
+    float: left;
+    padding: 30px 0 0 40px;;
+}
+.vipbox span{
+    float: left;
+    padding-left: 20px;
+}
+/* 服务热线 */
+.hot{
+    padding-top: 10px;
+    background: #fff;
+}
+
+.hotbox{
+    padding: 20px 0;
+    width: 25%;
+    float: left;
+}
+.hotbox h3{
+    color: #313131;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: left;
+    padding-bottom: 20px;
+    padding-left: 15px;
+}
+.hotbox .hot_p img{
+    float: left;
+    padding: 8px 5px 7px 15px;
+    width: 12px;
+    height: 12px;
+}
+.hotbox .hot_p p{
+    font-size: 14px;
+    display: inline-block;
+    text-align: left;
+    line-height: 30px;
+}
+/* 底部 */
+.fotter_b{
+    background: #fff;
+    clear: both;
+}
+.fotter_b .bj{
+    background: url("../images/bj.png") no-repeat center right;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    /* height: 327px; */
+    
+}
+.fotter_b .fotbox{
+    width: 190px;
+    float: left;
+    text-align: left;
+    overflow: hidden;
+    padding: 10px 0px 10px 15px;
+    
+}
+.fotter_b .fotbox h3{
+    font-size: 14px;
+    color: #313131;
+    font-weight: 600;
+    line-height: 40px;
+}
+.fotter_b .fotbox p{
+    font-size: 12px;
+    color: #707070;
+    width: 100%;
+    clear: both;
+    line-height: 40px;
+}
+.fotter_b .fotbox div{
+    font-size: 12px;
+    color: #707070;
+    width: 100%;
+    clear: both;
+    line-height: 40px;
+    font-weight: 600;
+}
+.fotter_b .fotbox1{
+    width: 350px;
+    height: 220px;
+    float: right;
+}
+.fotter_b .fotbox1 h3{
+    font-size: 14px;
+    color: #313131;
+    font-weight: 600;
+    line-height: 40px;
+}
+.fotter_b .fotbox1 p{
+    text-align: left;
+    color: #313131;
+    line-height: 24px;
+}
+.fotter_b .fotbox1 .fot_p{
+    width: 210px;
+}
+.fotter_b .fotbox1 .fot_p p{
+    width: 100px;
+    float: left;
+    line-height: 30px;
+}
+.fotter_b .fotbox2{
+    float: left;
+    padding-left: 10px;
+}
+.fotter_b .fotbox2 h3{
+    font-size: 14px;
+    color: #313131;
+    font-weight: 600;
+    line-height: 40px;
+}
+.fotter_b .fotbox2 div p{
+    float: left;
+    line-height: 24px;
+    padding-right: 10px;
+}
+.info{
+    padding: 20px 0;
+    background: #fff;
+    text-align: center;
+}
+.end{
+    background: #fff;
+    /* text-align: center; */
+    padding-bottom: 40px;
+}
+.end1{
+    margin: 0 auto;
+    width: 715px;
+    position: relative;
+}
+.endbox{
+    float: left;
+    line-height: 53px;
+    padding-right: 30px;
+}
+.endbox a img{
+    padding: 14px 5px 5px 20px;
+    float: left;
+    
+}
+.endbox a span{
+    float: left;
+}
+.end1 i{
+    width: 1px;
+    height: 40px;
+    background: #ccc;
+    position: absolute;
+    top:10px;
+}
+
+
+/* 背景框 */
+.bg{
+    background:url("../images/login1.jpg");
+    
+}
+.login{
+    position: relative;
+    height: 600px;
+}
+.login .loginbox{
+    width: 325px;
+    height: 450px;
+    background: #fff;
+    position: absolute;
+    top:100px;
+    right: 42px;
+    z-index: 998;
+    padding-left: 25px;
+}
+.loginbox h2{
+    padding: 5px 0;
+    font: 400 18px/50px 'Microsoft Yahei';
+    color: #313131;
+    margin-bottom: 10px;
+}
+.loginbox ul li{
+    height: 42px;
+    padding-bottom:15px;
+}
+.loginbox ul li span{
+    float: left;
+    width: 298px;
+    height: 40px;
+    border: 1px solid #616161;
+}
+.loginbox ul li span i{
+    float: left;
+    width: 40px;
+    height:40px;
+    background: #F3F3F3;
+    color: #E6E6E6;
+    font: 22px/40px "";
+    text-align: center;
+}
+.loginbox ul li span .i1{
+    float: right;
+    background: #fff;
+    font-size: 26px;
+}
+.loginbox ul li span input{
+    float: left;
+    border: none;
+    width: 213px;
+    height: 40px;
+    padding-left: 5px;
+}
+.loginbox ul li div input{
+    float: left;
+    padding-left: 5px;
+    border: 1px solid #616161;
+    width: 115px;
+    height: 40px;
+}
+.loginbox ul li div span{
+    float: left;
+    border: none;
+    width: 60px;
+    height: 20px;
+    line-height: 20px;
+    background: #ccc;
+    margin: 10px 5px;
+    text-align: center;
+    font-size: 20px;
+}
+.loginbox ul li div a{
+    float: left;
+    font-size: 14px;
+    color: black;
+    line-height: 40px;
+}
+.loginbox .dlbox{
+    width: 300px;
+    height: 30px;
+}
+.loginbox .dlbox a{
+    padding-right: 20px;
+    font-size: 14px;
+    color: black;
+}
+#loginbtn{
+    width: 300px;
+    height: 40px;
+    background: #00BBD7;
+    border: none;
+    font-size: 20px;
+    color: #fff;
+    letter-spacing: 15px;
+}
+#regbtn{
+    width: 300px;
+    height: 40px;
+    background: #00BBD7;
+    border: none;
+    font-size: 20px;
+    color: #fff;
+    letter-spacing: 15px;
+}
+.zcbox{
+    width: 300px;
+    height: 30px;
+    vertical-align: middle;
+}
+.zcbox input{
+    vertical-align: middle;
+}
+.zcbox span{
+    padding-left: 10px;
+}
+.zcbox span a{
+    color: #00BBD7;
+}
+
