@@ -192,7 +192,12 @@ body{
     background: #191a1e;
     padding: 0 20px 0 30px;
 }
+.navbox span i{
+    float: right;
+    color:#00BBD7;
+}
 .navbox ul{
+    display: none;
     position: absolute;
     left: 0;
     border-top:1px solid #d7d7d9;
@@ -212,8 +217,12 @@ body{
     float: left;
 }
 
-.navbox ul li .lb1 img{
-    padding-right:10px;
+.navbox ul li .lb1 i{
+    float: left;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color: #333;
 }
 .lb1 .lbimg2{
     display: none;
@@ -272,39 +281,6 @@ body{
     line-height: 30px;
     
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .ban{
     width: 100%;
@@ -695,7 +671,7 @@ body{
 /* 底部 */
 .fotter_b{
     background: #fff;
-    
+    clear: both;
 }
 .fotter_b .bj{
     background: url("../images/bj.png") no-repeat center right;
@@ -806,5 +782,24 @@ body{
     background: #ccc;
     position: absolute;
     top:10px;
+}
 
+
+/* 背景框 */
+.bg{
+    background:url("../images/login1.jpg");
+    
+}
+.login{
+    position: relative;
+    height: 600px;
+}
+.login .loginbox{
+    width: 350px;
+    height: 450px;
+    background: #fff;
+    position: absolute;
+    top:100px;
+    right: 42px;
+    z-index: 998;
 }
