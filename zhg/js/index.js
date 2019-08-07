@@ -18,7 +18,7 @@ $(".banner1").banner({
 class Sylist{
     constructor(){
         this.sylist = document.querySelector(".sylist");
-        this.url = "http://localhost/zhg/data/goods.json";
+        this.url = "http://localhost/zhg/data/goodsList.json";
         this.load()
     }
     load(){

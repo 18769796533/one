@@ -1,51 +1,73 @@
 ﻿[
 	{
-		"name":"【新品】华为（HUAWEI）MateBook X Pro 13.9英寸笔记本电脑（i5-8265U 8G 512GB MX250）MACHR-W19",
-		"price":"￥8999.00",
-		"url":"images/g1.jpg",
-		"tip":"● 3K分辨率，100% sRGB触摸屏",
+		"name":"Apple iPhone XS Max 64GB",
+		"price":"￥7799.00",
+		"url":"images/goods1.jpg",
+		"tip":"IP68 级别抗水",
+		"list1":"images/list1.jpg",
 		"goodsId":"1"
 	},{
-		"name":"【新品】华为（HUAWEI）MateBook X Pro 13.9英寸笔记本电脑（i5-8265U 8G 512GB MX250）MACHR-W19",
-		"price":"￥8999.00",
-		"url":"images/g1.jpg",
-		"tip":"● 3K分辨率，100% sRGB触摸屏",
-		"goodsId":"2"
+		"name":"【新品预订】ROG游戏手机2精英版 8GB+128GB 腾讯游戏深度定制 骁龙855Plus芯片 120Hz电竞屏 全网通双4G手机",
+		"price":"￥3799.00",
+		"url":"images/goods2.jpg",
+		"tip":"游戏精灵 120HZ电竞屏",
+		"list1":"images/list4.jpg",
+		"goodsId":"1"
 	},{
-		"name":"【新品】华为（HUAWEI）MateBook X Pro 13.9英寸笔记本电脑（i5-8265U 8G 512GB MX250）MACHR-W19",
-		"price":"￥8999.00",
-		"url":"images/g1.jpg",
-		"tip":"● 3K分辨率，100% sRGB触摸屏",
-		"goodsId":"3"
+		"name":"【新品】华为（HUAWEI）nova5 Pro 前置3200万自拍 麒麟980芯片 8GB+256GB全网通双卡双待 娱乐手机【区域限制】",
+		"price":"￥3399.00",
+		"url":"images/goods3.jpg",
+		"tip":"麒麟980 4800万AI4摄",
+		"list1":"images/list5.jpg",
+		"goodsId":"1"
 	},{
-		"name":"【新品】华为（HUAWEI）MateBook X Pro 13.9英寸笔记本电脑（i5-8265U 8G 512GB MX250）MACHR-W19",
-		"price":"￥8999.00",
-		"url":"images/g1.jpg",
-		"tip":"● 3K分辨率，100% sRGB触摸屏",
-		"goodsId":"4"
+		"name":"【新品】华为（HUAWEI）nova 5i 后置AI四摄 极点全面屏 前置2400万 8GB+128GB 全网通双卡双待 娱乐手机【区域限制】",
+		"price":"￥7799.00",
+		"url":"images/goods4.jpg",
+		"tip":"麒麟710 2400万AI4摄",
+		"list1":"images/list9.jpg",
+		"goodsId":"1"
 	},{
-		"name":"【新品】华为（HUAWEI）MateBook X Pro 13.9英寸笔记本电脑（i5-8265U 8G 512GB MX250）MACHR-W19",
-		"price":"￥8999.00",
-		"url":"images/g1.jpg",
-		"tip":"● 3K分辨率，100% sRGB触摸屏",
-		"goodsId":"5"
+		"name":"【新品预定】荣耀（Honor）9X  6GB+128GB 4800万像素 4000mAh大电池 麒麟810芯片 3D幻变玻璃机身 双卡双待全网通实用手机【一个ID限购一台】",
+		"price":"￥1899.00",
+		"url":"images/goods5.png",
+		"tip":"4000mAh大电池 麒麟810芯片",
+		"list1":"images/list1.jpg",
+		"goodsId":"1"
 	},{
-		"name":"【新品】华为（HUAWEI）MateBook X Pro 13.9英寸笔记本电脑（i5-8265U 8G 512GB MX250）MACHR-W19",
-		"price":"￥8999.00",
-		"url":"images/g1.jpg",
-		"tip":"● 3K分辨率，100% sRGB触摸屏",
-		"goodsId":"6"
+		"name":"纬图（VERTU）ASTER P 6+128G 双卡双待高端特色小牛皮全网通手机 ",
+		"price":"￥35800.00",
+		"url":"images/goods6.jpg",
+		"tip":"精制工艺 专属服务",
+		"list1":"images/list1.jpg",
+		"goodsId":"1"
 	},{
-		"name":"【新品】华为（HUAWEI）MateBook X Pro 13.9英寸笔记本电脑（i5-8265U 8G 512GB MX250）MACHR-W19",
-		"price":"￥8999.00",
-		"url":"images/g1.jpg",
-		"tip":"● 3K分辨率，100% sRGB触摸屏",
-		"goodsId":"7"
+		"name":"锐思（RECCI）迈腾系列 10000mAh移动电源 RP-10000（红色）",
+		"price":"￥99.00",
+		"url":"images/goods7.jpg",
+		"tip":"10000mAh 智能保护电路",
+		"list1":"images/list1.jpg",
+		"goodsId":"1"
 	},{
-		"name":"【新品】华为（HUAWEI）MateBook X Pro 13.9英寸笔记本电脑（i5-8265U 8G 512GB MX250）MACHR-W19",
-		"price":"￥8999.00",
-		"url":"images/g1.jpg",
-		"tip":"● 3K分辨率，100% sRGB触摸屏",
-		"goodsId":"8"
+		"name":"布鲁雅尔（Blueair）车载净化器P2i（深灰色）",
+		"price":"￥1699.00",
+		"url":"images/goods8.jpg",
+		"tip":"快速净化 智能控制",
+		"list1":"images/list1.jpg",
+		"goodsId":"1"
+	},{
+		"name":"一加 oneplus 7Pro 90Hz流体屏 骁龙855处理器 4800万后置三摄 8GB+256GB 全网通 双卡双待 经典手机",
+		"price":"￥4499.00",
+		"url":"images/goods9.jpg",
+		"tip":"90Hz流体屏 骁龙855处理器",
+		"list1":"images/list1.jpg",
+		"goodsId":"1"
+	},{
+		"name":"一加 oneplus 7Pro 90Hz流体屏 骁龙855处理器 4800万后置三摄 12G+256GB 全网通 双卡双待 经典手机（星雾蓝）",
+		"price":"￥4999.00",
+		"url":"images/goods10.jpg",
+		"tip":"90Hz流体屏 骁龙855处理器",
+		"list1":"images/list1.jpg",
+		"goodsId":"1"
 	}
 ]

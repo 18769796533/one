@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./libs/zttb/iconfont.css">
+    <link rel="stylesheet" href="./css/ydy.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/goods.css">
+</head>
+<body>
+    <!-- 顶部导航 -->
+    <div class="topNav"></div>
+    <!-- LOGO+搜索 -->
+    <div class="logoNav"></div>
+    <!-- 导航 -->
+    <div class="nav"></div>
+    <!-- 商品列表 -->
+    <div class="listGoods clear">
+        <div class="margin">
+            <ul class="glt clear">
+                <p>暂无商品，请稍后重试......</p>
+            </ul>
+        </div>
+    </div>
+    <!-- 底部vip条 -->
+    <div class="bvip"></div>
+    <!-- 服务热线 -->
+    <div class="hot clear"></div>
+    <!-- 底部代码 -->
+    <div class="fotter_b clear"></div>
+    <!-- 结束 -->
+    <div class="end clear"></div>
+</body>
+<script src="js/jquery2.2.4.js"></script>
+<script src="js/load.js"></script>
+<script src="js/ajax.js"></script>
+<script>
+    class Sylist{
+    constructor(){
+        this.glt = document.querySelector(".glt");
+        this.url = "http://localhost/zhg/data/goods.json";
+        this.load()
+    }
+    load(){
+        var that = this;
+        ajaxGet(this.url,function(res){
+            that.res = JSON.parse(res);
+            that.display();
+        })
+    }
+    display(){
+        var str = "";
+        for(var i = 0;i<this.res.length;i++){
+            str += `<li>
+                        <div class="glb1">
+                            <img src="${this.res[i].url}" alt="">
+                        </div>
+                        <div class="glb2 clear">
+                            <span>${this.res[i].tip}</span>
+                        </div>
+                        <h3>${this.res[i].name}</h3>
+                        <div class="glb3 clear">
+                            <span>${this.res[i].price}</span>
+                            <img src="${this.res[i].list1}" alt="">
+                        </div>
+                    </li>`
+        }
+        this.glt.innerHTML = str;
+    }
+}
+new Sylist();
+</script>
+</html>

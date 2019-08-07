@@ -1,0 +1,10 @@
+require.config({
+    baseUrl:"module",
+    paths:{
+        floor:"./floor",
+        jq:"../js/jquery2.2.4"
+    }
+})
+require(["jq","floor"],function(_,f){
+    console.log($)
+})

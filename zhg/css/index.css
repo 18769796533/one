@@ -1,12 +1,41 @@
 body{
     background: #f3f3f3;
     font-family: "微软雅黑";
+    /* overflow-x: hidden; */
 }
 /* 版心 */
 /* ----------------------------------------------- */
 .margin{
     width:1200px;
     margin: 0 auto;
+}
+
+/* 楼层 */
+
+.lc{
+    position: fixed;
+    top:25%;
+    margin-left: -50px;
+    z-index: 999;
+    display: none;
+}
+.lc div{
+    width: 40px;
+    height: 40px;
+    color: #fff;
+    text-align: center;
+    line-height: 40px;
+    background-color: #626262;
+    margin-bottom: 2px;
+}
+.lc div:hover{
+    background: #00BBD7;
+}
+.lc div:nth-child(8) i{
+    font-size: 18px;
+}
+.lc div:nth-child(3){
+    background: #00BBD7
 }
 /* 右边栏 */
 /* ----------------------------------------------- */
@@ -328,8 +357,8 @@ body{
 .imgbtns input{
     width:20px;
     height:50px;
-    border:none
-    ;background:#919191;
+    border:none;
+    background:#919191;
     position: absolute;
     top:50%;
     margin-top:-25px;
@@ -364,15 +393,10 @@ body{
 }
 .goodsList{
     padding: 10px;
-    position: relative;
 }
-.goodsList p{
-    width: 1212px;
-    height: 760px;
-}
+
 .goodsList ul{
     width: 1212px;
-    position: absolute;
 }
 .goodsList ul li{
     width: 290px;
@@ -383,9 +407,6 @@ body{
     margin-right: 13px;
     margin-bottom: 10px;
 }
-
-
-
 .goodsList ul li div{
     padding: 0 10px;
     width: 270px;
@@ -427,22 +448,6 @@ body{
 .goodsList .sylist1{
     display: none;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .goodsbox3,.goodsbox4,.goodsbox5{
     padding-top:30px;
 }
@@ -593,10 +598,10 @@ body{
 #tjbtn2{
     background: url("../images/btn2.jpg")
 }
-.goodsbox6 ul{
+.goodsbox7 ul{
     width: 1210px;
 }
-.goodsbox6 ul li{
+.goodsbox7 ul li{
     width: 232px;
     height: 320px;
     margin-right: 10px;

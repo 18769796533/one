@@ -1,0 +1,52 @@
+.margin{
+    width:1520px;
+}
+.listGoods ul{
+    padding-top: 10px;
+}
+.listGoods ul li{
+    background-color: #fff;
+    float: left;
+    overflow: hidden;
+    margin-bottom: 40px;
+    margin-right: 20px;
+    width: 280px;
+    height: 380px;
+    text-align: center;
+}
+
+.listGoods ul li img{
+    width: 200px;
+    padding: 10px 0;
+}
+.listGoods ul li .glb2{
+    height: 30px;
+    text-align: center;
+    padding: 20px 0;
+}
+.glb2 span{
+    display: inline-block;
+    padding: 5px;
+    border: 1px solid red;
+    color: red;
+}
+.listGoods ul li h3{
+    height: 50px;
+    line-height: 25px;
+    overflow: hidden;
+}
+.listGoods ul li .glb3{
+    padding: 10px;
+}
+.listGoods ul li .glb3 span{
+    color: #fc3637;
+    font-size: 14px;
+    line-height: 30px;
+    float: left;
+}
+.listGoods ul li .glb3 img{
+    width: 28px;
+    border: 1px solid #ccc;
+    padding: 0;
+    float: right;
+}
