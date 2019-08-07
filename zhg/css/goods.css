@@ -50,3 +50,24 @@
     padding: 0;
     float: right;
 }
+.listGoods ul li .box2{
+    padding: 0;
+    height: 104px;
+    text-align: center;
+    display: none;
+}
+.listGoods ul li .box2 i{
+    display: inline-block;
+    color: #fc3538;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 40px;
+}
+.listGoods ul li .box2 input{
+    color: #fff;
+    width: 215px;
+    height: 50px;
+    background: #00BBD7;
+    border: none;
+    font-size: 16px;
+}

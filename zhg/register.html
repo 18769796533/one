@@ -27,25 +27,25 @@
                     <li>
                         <span>
                             <i class="iconfont">&#xe644;</i>
-                            <input type="text" placeholder="请输入用户名">
+                            <input type="text" placeholder="请输入用户名" id="reguser">
                         </span>
                     </li>
                     <li>
                         <span>
                             <i class="iconfont">&#xe644;</i>
-                            <input type="text" placeholder="请设置登录密码，6-20个字符，须含数字和大小写字母">
+                            <input type="text" placeholder="请设置登录密码，6-20个字符，须含数字和大小写字母" id="regpass">
                         </span>
                     </li>
                     <li>
                         <span>
                             <i class="iconfont">&#xe61c;</i>
-                            <input type="text" placeholder="请输入11位手机号">
+                            <input type="text" placeholder="请输入11位手机号" id="regtel">
                         </span>
                     </li>
                     <li>
                         <span>
                             <i class="iconfont">&#xe644;</i>
-                            <input type="text" placeholder="请输入邮箱">
+                            <input type="text" placeholder="请输入邮箱" id="regem">
                         </span>
                     </li>
                 </ul>
@@ -56,6 +56,7 @@
                     </span>
                 </div>
                 <input type="button" value="注册" id="regbtn">
+                <p></p>
             </div>
         </div>
     </div>
@@ -70,4 +71,54 @@
 </body>
 <script src="js/jquery2.2.4.js"></script>
 <script src="js/load.js"></script>
+<script>
+    class Zhuce{
+        constructor(){
+            this.user = $("#reguser");
+            this.pass = $("#regpass");
+            this.tel = $("#regtel");
+            this.email = $("#regemail");
+            this.op = $(".loginbox p");
+            this.btn = $("#regbtn");
+            this.url = "http://api.icodeilife.cn:81/user";
+            this.addEvent();
+        }
+        addEvent(){
+            
+            var that = this;
+            this.btn.on("click",function(){
+                that.load()
+            })
+        }
+        load(){
+            var that = this;
+            $.ajax({
+                url:this.url,
+                data:{
+                    type:"register",
+                    user:this.user.val(),
+                    pass:this.pass.val(),
+                    tel:this.tel.val(),
+                    email:this.email.val()
+                },
+                success:function(res){
+                    
+                    that.res = JSON.parse(res);
+                    if(that.res.code == 1){
+                        that.op.html("注册成功，5秒后跳转到<a href='login.html'>登录页面</a>")
+                        setTimeout(function(){
+                            location.href = "login.html"
+                        },5000)
+                    }else{
+                        that.op.html("用户名重复，请重新注册")
+                    }
+                }
+            })
+
+        }
+    }
+    new Zhuce();
+
+
+</script>
 </html>

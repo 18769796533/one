@@ -145,9 +145,19 @@ body{
 }
 .btns{
     float: right;
-    
 }
-.btns a{
+.btns .p1{
+    float: left;
+}
+.btns .p2{
+    float: left;
+    width: 180px;
+    height: 42px;
+    line-height: 21px;
+    background: #ccc;
+    text-align: center;
+}
+.btns .p1 a{
     float: left;
     width: 65px;
     height: 40px;
@@ -165,6 +175,7 @@ body{
     background: #fff;
     color: #616161;
 }
+
 #btn{
     width:128px;
     height: 42px;
@@ -444,6 +455,27 @@ body{
     text-align: left;
     font-weight: 600;
     padding-top: 10px;
+}
+.goodsList ul li .box2{
+    padding: 0;
+    height: 104px;
+    text-align: center;
+    display: none;
+}
+.goodsList ul li .box2 i{
+    display: inline-block;
+    color: #fc3538;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 40px;
+}
+.goodsList ul li .box2 input{
+    color: #fff;
+    width: 215px;
+    height: 50px;
+    background: #00BBD7;
+    border: none;
+    font-size: 16px;
 }
 .goodsList .sylist1{
     display: none;

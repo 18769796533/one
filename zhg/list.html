@@ -22,6 +22,7 @@
         <div class="margin">
             <ul class="glt clear">
                 <p>暂无商品，请稍后重试......</p>
+                
             </ul>
         </div>
     </div>
@@ -56,7 +57,7 @@
         for(var i = 0;i<this.res.length;i++){
             str += `<li>
                         <div class="glb1">
-                            <img src="${this.res[i].url}" alt="">
+                            <a href=""><img src="${this.res[i].url}" alt=""></a>
                         </div>
                         <div class="glb2 clear">
                             <span>${this.res[i].tip}</span>
@@ -66,9 +67,23 @@
                             <span>${this.res[i].price}</span>
                             <img src="${this.res[i].list1}" alt="">
                         </div>
+                        <div class="box2">
+                            <i>${this.res[i].price}</i>
+                            <input type="button" value="加入购物车" id="carbtn">
+                        </div>
                     </li>`
         }
         this.glt.innerHTML = str;
+        this.car()
+    }
+    car(){
+        $(".glt").find("li").hover(function(){
+            $(this).children().not(".glb1").hide()
+            $(this).find(".box2").show()
+        },function(){
+            $(this).children().show()
+            $(this).find(".box2").hide()
+        })
     }
 }
 new Sylist();

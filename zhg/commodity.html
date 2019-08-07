@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./libs/zttb/iconfont.css">
+    <link rel="stylesheet" href="./css/ydy.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/fdj.css">
+</head>
+<body>
+    <!-- 顶部导航 -->
+    <div class="topNav"></div>
+    <!-- LOGO+搜索 -->
+    <div class="logoNav"></div>
+    <!-- 导航 -->
+    <div class="nav"></div>
+    <!-- 商品详情 -->
+    <div class="fdj">
+        <div class="fdj_d"></div>
+        <div class="fdjimg margin">
+            <div class="xbox">
+                <img src="./images/goods1.jpg" alt="">
+                <p></p>
+                <span></span>
+            </div>
+            <div class="dbox">
+                <img src="./images/goods1.jpg" alt="">
+            </div>
+            <ul class="zbox">
+                <li id="btn1"><img src="./images/goods1.jpg" alt=""></li>
+                <li id="btn2"><img src="./images/goods11.jpg" alt=""></li>
+            </ul>
+            <div class="goodsjs">
+                <ul>
+                    <li>
+                        <h2>Apple iPhone XS Max 64GB</h2>
+                    </li>
+                    <li>
+                        <div>
+                            <b>
+                                ￥
+                                <span>7799.00</span>
+                            </b>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+    <!-- 底部vip条 -->
+    <div class="bvip"></div>
+    <!-- 服务热线 -->
+    <div class="hot clear"></div>
+    <!-- 底部代码 -->
+    <div class="fotter_b clear"></div>
+    <!-- 结束 -->
+    <div class="end clear"></div>
+</body>
+<script src="js/jquery2.2.4.js"></script>
+<script src="js/load.js"></script>
+<script src="js/ajax.js"></script>
+<script>
+    function Fdj(){
+        this.xbox = document.querySelector(".xbox");
+        this.span = document.querySelector(".xbox span");
+        this.dbox = document.querySelector(".dbox");
+        this.img = document.querySelector(".dbox img");
+        this.addEvent();
+    }
+    Fdj.prototype.init = function(){
+        this.span.style.width = this.dbox.offsetWidth / this.img.offsetWidth * this.xbox.offsetWidth +"px";
+        this.span.style.height = this.dbox.offsetHeight / this.img.offsetHeight * this.xbox.offsetHeight +"px";
+    }
+    Fdj.prototype.addEvent = function(){
+        var that =this;
+        this.xbox.addEventListener("mouseover",function(){
+            that.over();
+            that.init();
+        })
+        this.xbox.addEventListener("mouseout",function(){
+            that.out();
+        })
+        this.xbox.addEventListener("mousemove",function(){
+            that.move();
+        })
+    }
+    Fdj.prototype.over = function(){
+        this.span.style.display = "block";
+        this.dbox.style.display = "block";
+    }
+    Fdj.prototype.out = function(){
+        this.span.style.display = "none";
+        this.dbox.style.display = "none";
+    }
+    Fdj.prototype.move = function(eve){
+        var e = eve || window.event;
+        var l = e.offsetX - this.span.offsetWidth/2;
+        var t = e.offsetY - this.span.offsetHeight/2;
+        var r = this.xbox.offsetWidth - this.span.offsetWidth;
+        var b = this.xbox.offsetHeight - this.span.offsetHeight;
+        if(l<0){
+            l=0;
+        }
+        if(t<0){
+            t=0;
+        }
+        if(l>r){
+            l=r;
+        }
+        if(t>b){
+            t=b;
+        }
+        this.span.style.left = l + "px";
+        this.span.style.top = t + "px";
+        var x = l/r;
+        var y = t/b;
+        this.img.style.left = -x * (this.img.offsetWidth - this.dbox.offsetWidth) + "px";
+        this.img.style.top = -y * (this.img.offsetHeight - this.dbox.offsetHeight) + "px";
+    }
+    new Fdj();
+    var btn1 = document.querySelector("#btn1");
+    var btn2 = document.querySelector("#btn2");
+    var btn3 = document.querySelector("#btn3");
+    var img1 = document.querySelector(".xbox img");
+    var img2 = document.querySelector(".dbox img");
+    btn1.onclick = function(){
+        img1.src = "./images/goods1.jpg";
+        img2.src="./images/goods1.jpg";
+    }
+    btn2.onclick = function(){
+        img1.src = "./images/goods11.jpg";
+        img2.src="./images/goods11.jpg";
+    }
+    
+</script>
+</html>

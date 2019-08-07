@@ -81,71 +81,7 @@
         <div class="goodsList margin clear">
             <ul class="sylist">
                 <p>当前没有商品，请稍后再来......</p>
-                <!-- <li>
-                    <div>
-                        <img src="images/g1.jpg" alt="">
-                        <h4>博世（BOSCH）608升 风冷无霜变频对开门冰箱 KAN9AV266C（玫瑰金色）</h4>
-                        <p>● 主动增湿，蔬果保鲜更保湿，维持食物口感</p>
-                        <em>￥9290.00</em>
-                    </div>
-                </li>
-                <li>
-                    <div>
-                        <img src="images/g1.jpg" alt="">
-                        <h4>博世（BOSCH）608升 风冷无霜变频对开门冰箱 KAN9AV266C（玫瑰金色）</h4>
-                        <p>● 主动增湿，蔬果保鲜更保湿，维持食物口感</p>
-                        <em>￥9290.00</em>
-                    </div>
-                </li>
-                <li>
-                    <div>
-                        <img src="images/g1.jpg" alt="">
-                        <h4>博世（BOSCH）608升 风冷无霜变频对开门冰箱 KAN9AV266C（玫瑰金色）</h4>
-                        <p>● 主动增湿，蔬果保鲜更保湿，维持食物口感</p>
-                        <em>￥9290.00</em>
-                    </div>
-                </li>
-                <li>
-                    <div>
-                        <img src="images/g1.jpg" alt="">
-                        <h4>博世（BOSCH）608升 风冷无霜变频对开门冰箱 KAN9AV266C（玫瑰金色）</h4>
-                        <p>● 主动增湿，蔬果保鲜更保湿，维持食物口感</p>
-                        <em>￥9290.00</em>
-                    </div>
-                </li> -->
                 
-                <!-- <li>
-                    <div>
-                        <img src="images/g1.jpg" alt="">
-                        <h4>博世（BOSCH）608升 风冷无霜变频对开门冰箱 KAN9AV266C（玫瑰金色）</h4>
-                        <p>● 主动增湿，蔬果保鲜更保湿，维持食物口感</p>
-                        <em>￥9290.00</em>
-                    </div>
-                </li>
-                <li>
-                    <div>
-                        <img src="images/g1.jpg" alt="">
-                        <h4>博世（BOSCH）608升 风冷无霜变频对开门冰箱 KAN9AV266C（玫瑰金色）</h4>
-                        <p>● 主动增湿，蔬果保鲜更保湿，维持食物口感</p>
-                        <em>￥9290.00</em>
-                    </div>
-                </li>
-                <li>
-                    <div>
-                        <img src="images/g1.jpg" alt="">
-                        <h4>博世（BOSCH）608升 风冷无霜变频对开门冰箱 KAN9AV266C（玫瑰金色）</h4>
-                        <p>● 主动增湿，蔬果保鲜更保湿，维持食物口感</p>
-                        <em>￥9290.00</em>
-                    </div>
-                </li>
-                <li>
-                    <div>
-                        <img src="images/g1.jpg" alt="">
-                        <h4>博世（BOSCH）608升 风冷无霜变频对开门冰箱 KAN9AV266C（玫瑰金色）</h4>
-                        <p>● 主动增湿，蔬果保鲜更保湿，维持食物口感</p>
-                        <em>￥9290.00</em>
-                    </div>
-                </li> -->
             </ul>
             <ul class="sylist1">
                 <li>
@@ -467,29 +403,4 @@
 <script src="js/ajax.js"></script>
 <script src="js/index.js"></script>
 <script src="./libs/require.js"></script>
-<script>
-    $(".goods_d2").find("a").eq(0).on("click",function(){
-        $(".goodsList").find(".sylist").hide().siblings(".sylist1").show();
-    })
-    // 滑动滚动条
-    $(document).scroll(function(){
-    // 滚动条距离顶部的距离 大于 200px时
-        if($(document).scrollTop()>= 384){
-            $(".lc").show()
-        }else{
-            $(".lc").hide()
-        }
-    });
-    
-    $(".lc").find(".top").on("click",function(){
-        $("html").stop().animate({
-            scrollTop:0
-        })
-    })
-    $(".lc").children("div").not(".top").on("click",function(){
-        $("html").stop().animate({
-            scrollTop:$(".gb").eq($(this).index()).offset().top
-        })
-    })
-</script>
 </html>

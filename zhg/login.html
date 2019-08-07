@@ -27,13 +27,13 @@
                     <li>
                         <span>
                             <i class="iconfont">&#xe61c;</i>
-                            <input type="text" placeholder="用户名/邮箱地址/手机号">
+                            <input type="text" placeholder="用户名/邮箱地址/手机号" id="user">
                         </span>
                     </li>
                     <li>
                         <span>
                             <i class="iconfont">&#xe644;</i>
-                            <input type="text" placeholder="用户名/邮箱地址/手机号">
+                            <input type="text" placeholder="填写密码" id="pass">
                             <i class=" iconfont i1">&#xe728;</i>
                         </span>
                     </li>
@@ -51,6 +51,7 @@
                     <a href="">验证码登录</a>
                 </div>
                 <input type="button" value="登录" id="loginbtn">
+                <p></p>
             </div>
         </div>
     </div>
@@ -65,4 +66,54 @@
 </body>
 <script src="js/jquery2.2.4.js"></script>
 <script src="js/load.js"></script>
+<script>
+    //登录注册
+    class Denglu{
+        constructor(){
+            this.user = $("#user");
+            this.pass = $("#pass");
+            this.op = $(".loginbox p");
+            this.obtn = $("#loginbtn")
+            this.url = "http://api.icodeilife.cn:81/user";
+            this.addEvent()
+        }
+        addEvent(){
+            var that = this;
+            this.obtn.on("click",function(){
+                that.load()
+            })
+        }
+        load(){
+            var that = this;
+            $.ajax({
+                url:this.url,
+                data:{
+                    type:"login",
+                    user:this.user.val(),
+                    pass:this.pass.val()
+                },
+                success:function(res){
+                    res = JSON.parse(res);
+                    switch(res.code){
+                        case 0:
+                            that.op.html("不存在此用户名，请<a href='register.html'>注册</a>");
+                            break;
+                        case 1:
+                            that.op.html("登录成功，5秒后跳转到<a href='index.html'>首页</a>");
+                            localStorage.setItem("local",JSON.stringify(res.msg))
+                            setTimeout(function(){
+                                location.href = "index.html";
+                            },5000)
+                            break;
+                        case 2:
+                            that.op.html("账号密码错误");
+                            break;
+                    }
+                }
+            })
+        }
+    }
+    new Denglu();
+
+</script>
 </html>

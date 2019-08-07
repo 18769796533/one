@@ -1,5 +1,5 @@
 $(".topNav").load("http://localhost/zhg/load.html .one",);
-$(".logoNav").load("http://localhost/zhg/load.html .two",);
+$(".logoNav").load("http://localhost/zhg/load.html .two",fn1);
 $(".nav").load("http://localhost/zhg/load.html .three",fn);
 $(".bvip").load("http://localhost/zhg/load.html .four",);
 $(".hot").load("http://localhost/zhg/load.html .five",);
@@ -49,4 +49,23 @@ function fn(){
             color:"#666"
         })
     })
+}
+
+
+
+function fn1(){
+    var loc = localStorage.getItem("local")
+    if(loc){
+        $(".p1").hide();
+        $(".p2").show().find("span").html(JSON.parse(loc).user)
+    }else{
+        $(".p1").show()
+        $(".p2").hide()
+    }
+    $(".p2").find("a").on("click",function(){
+        localStorage.removeItem("local")
+        $(".p1").show()
+        $(".p2").hide()
+    })
+    
 }
