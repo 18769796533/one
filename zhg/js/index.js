@@ -9,7 +9,6 @@ $(".banner1").banner({
     moveTime:600,                          //可选，默认300
     index:0,                                //可选，默认0
 })
-
 //首页商品请求数据
 class Sylist{
     constructor(){
@@ -55,46 +54,8 @@ class Sylist{
 }
 new Sylist();
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 //选项卡
 $(".goods_d2").find("a").eq(0).on("click",function(){
     $(".goodsList").find(".sylist").hide().siblings(".sylist1").show();
 })
-//楼层效果
-$(document).scroll(function(){
-    if($(document).scrollTop()>= 384){
-        $(".lc").show()
-    }else{
-        $(".lc").hide()
-    }
-});
-
-$(".lc").find(".top").on("click",function(){
-    $("html").stop().animate({
-        scrollTop:0
-    })
-})
-$(".lc").children("div").not(".top").on("click",function(){
-    $("html").stop().animate({
-        scrollTop:$(".gb").eq($(this).index()).offset().top
-    })
-})
-
-
-
-
-
 

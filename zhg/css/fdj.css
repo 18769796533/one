@@ -7,7 +7,7 @@ body{
 }
 .fdjimg{
     position: relative;
-    border: 1px solid red;
+
     height: 630px;
     padding-top: 20px;
 }
@@ -74,7 +74,7 @@ body{
     float: right;
     width: 450px;
     height: 100%;
-    border: 1px solid red;
+    
 }
 .goodsjs ul{
     padding-top: 20px;
@@ -107,3 +107,125 @@ body{
     font-weight: 400;
     line-height: 62px;
 }
+.gj1,.gj2,.gj3,.gj4{
+    padding-top: 10px;
+}
+.gj1 div{
+    float: left;
+    color: #666666;
+}
+.gj1 ul{
+    float: left;
+    padding: 0;
+    width: 390px;
+}
+.gj1 ul li{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis
+}
+.gj1 ul li img{
+    width: 24px;
+}
+.gj1 ul li a{
+    color: #00bad7;
+    
+}
+
+.gj2 div{
+    float: left;
+    color: #666666;
+    padding-right: 20px;
+}
+.gj2 ul{
+    float: left;
+    padding: 0;
+}
+.gj2 ul li{
+    float: left;
+    padding-right: 10px;
+}
+.gj2 ul li img{
+    width: 28px;
+    border: 2px solid #ccc;
+}
+.gj3 div{
+    float: left;
+    color: #666666;
+    padding-right: 20px;
+}
+.gj3 i{
+    float: left;
+    width: 42px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    border: 2px solid #00bad7;
+    color: #111111;
+}
+.gj4 div{
+    float: left;
+    color: #666666;
+    padding-right: 20px;
+}
+.gj4 span{
+    float: left;
+    border: 1px solid #ccc;
+}
+.gj4 span a{
+    float: left;
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    line-height: 35px;
+    font-size: 20px;
+}
+.gj4 input{
+    float: left;
+    width: 46px;
+    height: 35px;
+    border: none;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    text-align: center;
+}
+.gj5{
+    padding-top: 30px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+}
+.gj5 img{
+    width: 20px;
+    padding-right: 5px;
+}
+.gj5 span{
+    color: #000;
+}
+.gj5 span em{
+    color: #00bad7;
+}
+.gj6{
+    padding:10px 0;
+    border-bottom: 1px solid #ccc;
+}
+.gj6 p{
+    line-height: 25px;
+    color: #666666;
+}
+.gj7{
+    padding-top: 30px;
+    text-align: center;
+}
+.gj7 input{
+    width: 135px;
+    height: 40px;
+    border: none;
+    color: #fff;
+}
+#gm{
+    background: #FF531B;
+}
+#jcar{
+    background: #00bad7;
+}
+

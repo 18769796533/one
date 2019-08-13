@@ -1,0 +1,60 @@
+.cart{
+    border-bottom:2px solid black;
+}
+.cart1{
+    padding: 30px 0;
+    height: 50px;
+}
+.cart1 img{
+    height: 50px;
+    float: left;
+}
+.cart1 h1{
+    float: left;
+    color: #303030;
+    font-size: 30px;
+    padding-left: 85px;
+    line-height: 50px;
+}
+.cart1 span{
+    float: left;
+    height: 38px;
+    padding-top: 12px;
+    padding-left: 30px;
+    line-height: 18px;
+    width: 760px;
+}
+
+/* .carz table{
+    text-align:center;
+    border:1px solid black;
+    cellspacing:0;
+    width: 1200px;
+    
+} */
+.carz{
+    padding-top: 30px;
+}
+.carz th{
+    color: #303030;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 60px;
+    border: 2px solid black;
+}
+.carz td{
+    text-align: center;
+    height: 148px;
+    border: 2px solid black;
+    color: #303030;
+    font-size: 14px;
+}
+.carz td a{
+    color: red;
+    font-weight: bold;
+    font-size: 20px;
+}
+.car zimg{
+    width:80px;
+    height:80px;
+}

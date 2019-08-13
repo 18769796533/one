@@ -38,12 +38,14 @@
 <script src="js/jquery2.2.4.js"></script>
 <script src="js/load.js"></script>
 <script src="js/ajax.js"></script>
+<script src="js/cookie.js"></script>
 <script>
     class Sylist{
     constructor(){
         this.glt = document.querySelector(".glt");
         this.url = "http://localhost/zhg/data/goods.json";
         this.load()
+        this.addEvent();
     }
     load(){
         var that = this;
@@ -57,7 +59,7 @@
         for(var i = 0;i<this.res.length;i++){
             str += `<li>
                         <div class="glb1">
-                            <a href=""><img src="${this.res[i].url}" alt=""></a>
+                            <a href="commodity.html  "><img src="${this.res[i].url}" alt=""></a>
                         </div>
                         <div class="glb2 clear">
                             <span>${this.res[i].tip}</span>
@@ -67,9 +69,9 @@
                             <span>${this.res[i].price}</span>
                             <img src="${this.res[i].list1}" alt="">
                         </div>
-                        <div class="box2">
+                        <div class="box2" zxc="${this.res[i].goodsId}">
                             <i>${this.res[i].price}</i>
-                            <input type="button" value="加入购物车" id="carbtn">
+                            <input type="button" value="加入购物车" class="carbtn">
                         </div>
                     </li>`
         }
@@ -84,6 +86,46 @@
             $(this).children().show()
             $(this).find(".box2").hide()
         })
+    }
+    addEvent(){
+        var that = this;
+        this.glt.addEventListener("click",function(eve){
+            var e = window.event || eve;
+            var target = e.target || srcElement;
+            if(target.className=="carbtn"){
+                that.id = target.parentNode.getAttribute("zxc");
+                that.setCookie();
+            }
+        })
+    }
+    setCookie(){
+        
+        this.goods = getCookie("goods") ? JSON.parse(getCookie("goods")) : [];
+        // //判断是不是一个空数组，是空数组则代表第一次添加
+        if(this.goods.length == 0){
+            //第一次直接写对象
+            this.goods.push({
+                id:this.id,
+                num:1
+            })
+        }else{
+            var i = 0;
+            var onoff = this.goods.some((val,index)=>{
+                i = index;
+                return val.id == this.id;
+            })
+            if(onoff){
+                this.goods[i].num++
+            }else{
+                this.goods.push({
+                    id:this.id,
+                    num:1
+                })
+            }
+        }
+
+        setCookie("goods",JSON.stringify(this.goods))
+        
     }
 }
 new Sylist();

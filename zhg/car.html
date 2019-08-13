@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./libs/zttb/iconfont.css">
+    <link rel="stylesheet" href="./css/ydy.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/car.css">
+</head>
+<body>
+    <!-- 购物车头部 -->
+    <div class="cart">
+        <div class="cart1 margin clear">
+            <img src="./images/logo.png" alt="">
+            <h1>我的购物车</h1>
+            <span>商品从门店或者发货，我们将尽快发货。门店自提订单，24小时内将提货码发送至您的手机，请您留意手机短信。由于市场变化及各种合理商业努力都难以控制的因素的影响，商城无法保证用户提交的订单希望购买的商品都有货；如用户拟购买的商品缺货，用户和商家都可取消订单。</span>
+        </div>
+    </div>
+    <!-- 购物车内部 -->
+    <div class="carz">
+        <div class="margin">
+            <table border="1" cellspacing="0" width="1200" align="center">
+                <thead>
+                    <tr>
+                        <th>商品名称</th>
+                        <th>价格</th>
+                        <th>数量</th>
+                        <th>小计</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td colspan="6">购物车为空<a href="##">去购物</a></td>
+                    </tr>
+                    <!-- <tr>
+                        <td>商品名称</td>
+                        <td>数量</td>
+                        
+                        <td>小计</td>
+                        <td>删除</td>
+                    </tr> -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <!-- 底部vip条 -->
+    <div class="bvip"></div>
+    <!-- 服务热线 -->
+    <div class="hot clear"></div>
+    <!-- 底部代码 -->
+    <div class="fotter_b clear"></div>
+    <!-- 结束 -->
+    <div class="end clear"></div>
+</body>
+<script src="js/jquery2.2.4.js"></script>
+<script src="js/load.js"></script>
+<script src="js/ajax.js"></script>
+<script src="js/cookie.js"></script>
+<script>
+    class Car{
+        constructor(){
+            this.tbody = document.querySelector("tbody");
+            this.url = "http://localhost/zhg/data/goods.json";
+            this.load();
+            this.addEvent();
+            this.onoff = 0;
+        }
+        addEvent(){
+            
+            var that = this;
+            this.tbody.addEventListener("click",function(eve){
+                var e = eve || window.event;
+                var target = e.target || srcElement;
+                if(target.className == "del"){
+                    that.id = target.parentNode.getAttribute("index");
+                    target.parentNode.remove();
+                    that.deleteCookie();
+                    // that.onoff = 1;
+                }
+            })
+            this.tbody.addEventListener("input",function(eve){
+                var e = eve || window.event;
+                var target = e.target || srcElement;
+                if(target.className == "upd"){
+                    that.id = target.parentNode.parentNode.getAttribute("index");
+                    that.num = target.value;
+                    that.updateCookie();
+                    // that.onoff = 2;
+                }
+            })
+        }
+        
+        updateCookie(){
+            for(var i = 0 ; i<this.goods.length;i++){
+                if(this.goods[i].id == this.id){
+                    this.goods[i].num = this.num;
+                }
+            }
+            setCookie("goods",JSON.stringify(this.goods))
+        }
+        deleteCookie(){
+            // console.log(this.goods)
+            for(var i = 0 ; i<this.goods.length;i++){
+                if(this.goods[i].id == this.id){
+                    this.goods.splice(this.goods[i],1)
+                }
+            }
+            setCookie("goods",JSON.stringify(this.goods))
+        }
+        load(){
+            var that = this;
+            ajaxGet(this.url,function(res){
+                that.res = JSON.parse(res);
+                that.getCookie();
+            })
+        }
+        getCookie(){
+            this.goods = getCookie("goods") ? JSON.parse(getCookie("goods")) : [];
+            this.display()
+        }
+        display(){
+            console.log(1)
+            var str = "";
+            for(var i = 0;i<this.goods.length;i++){
+                for(var j = 0; j<this.res.length;j++){
+                    if(this.goods[i].id == this.res[j].goodsId){
+                    // console.log(this.res[i])
+                    str += `<tr index="${this.res[j].goodsId}>
+                                <td>${this.res[j].name}</td>
+                                <td>${this.res[j].price}</td>
+                                <td><input type="number" value="${this.goods[i].num}" class="upd" min="1"></td>
+                                <td class="val">
+                                    ${this.goods[i].num*this.res[j].price}
+                                </td>
+                                <td class="del>删除</td>
+                            </tr>`;
+                    }
+                }
+            }
+            this.tbody.innerHTML = str;
+        }
+    }
+    new Car();
+
+
+
+
+</script>
+
+</html>

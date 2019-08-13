@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./libs/zttb/iconfont.css">
+    <link rel="stylesheet" href="./css/ydy.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/fdj.css">
+</head>
+<body>
+    <!-- 顶部导航 -->
+    <div class="topNav"></div>
+    <!-- LOGO+搜索 -->
+    <div class="logoNav"></div>
+    <!-- 导航 -->
+    <div class="nav"></div>
+
+
+
+
+
+
+    
+    <!-- 商品详情 -->
+    <div class="fdj">
+        <!-- <div class="fdj_d"></div>
+        <div class="fdjimg margin">
+            <div class="xbox">
+                <img src="./images/goods1.jpg" alt="">
+                <p></p>
+                <span></span>
+            </div>
+            <div class="dbox">
+                <img src="./images/goods1.jpg" alt="">
+            </div>
+            <ul class="zbox">
+                <li id="btn1"><img src="./images/goods1.jpg" alt=""></li>
+                <li id="btn2"><img src="./images/goods11.jpg" alt=""></li>
+            </ul>
+            <div class="goodsjs">
+                <ul>
+                    <li>
+                        <h2>Apple iPhone XS Max 64GB</h2>
+                    </li>
+                    <li>
+                        <div>
+                            <b>
+                                ￥
+                                <span>7799.00</span>
+                            </b>
+                        </div>
+                    </li>
+                </ul>
+                <div class="gj1 clear">
+                    <div>赠&nbsp;&nbsp;&nbsp;品：&nbsp;&nbsp;&nbsp;</div>
+                    <ul>
+                        <li>
+                            <img src="./images/xq1.jpg" alt="">
+                            <a href="">锐思（Recci） iPhone6.5寸手机壳 iPhone6.5清逸系列</a>
+                        </li>
+                        <li>
+                            <img src="./images/xq2.jpg" alt="">
+                            <a href="">触宝（Zupool） iPhone6.5寸AK系列钢化玻璃膜 02-ZP-AP-IP(6.5)-AK</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="gj2 clear">
+                    <div>机身颜色</div>
+                    <ul>
+                        <li>
+                            <img src="./images/list1.jpg" alt="">
+                        </li>
+                        <li>
+                            <img src="./images/list2.jpg" alt="">
+                        </li>
+                        <li>
+                            <img src="./images/list3.jpg" alt="">
+                        </li>
+                    </ul>
+                </div>
+                <div class="gj3 clear">
+                    <div>选择容量</div>
+                    <i>64GB</i>
+                </div>
+                <div class="gj4 clear">
+                    <div>数量&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+                    <span>
+                        <a href="##" class="gj4_l">-</a>
+                        <input readonly ="readonly" value="1">
+                        <a href="##" class="gj4_r">+</a>
+                    </span>
+                </div>
+                <div class="gj5 clear">
+                    <img src="./images/x4.png" alt="">
+                    <span>顺丰、德邦、顺电配送</span>
+                    <img src="./images/x5.png" alt="">
+                    <span>订单满200元<em>花呗3期免息</em>、包邮</span>
+                </div>
+                <div class="gj6">
+                    <p>● 6.5 英寸超视网膜显示屏 (OLED)，支持 HDR 显示</p>
+                    <p>● IP68 级别抗水防尘特性</p>
+                    <p>● 1200 万像素双镜头摄像头+700万像素原深感摄像头</p>
+                    <p>● A12 仿生，拥有神经网络引擎</p>
+                    <p>● 支持双卡双待</p>
+                </div>
+                <div class="gj7">
+                    <input type="button" value="立即购买" id="gm">
+                    <input type="button" value="加入购物车"id="jcar">
+                </div>
+            </div>
+        </div> -->
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+    <!-- 底部vip条 -->
+    <div class="bvip"></div>
+    <!-- 服务热线 -->
+    <div class="hot clear"></div>
+    <!-- 底部代码 -->
+    <div class="fotter_b clear"></div>
+    <!-- 结束 -->
+    <div class="end clear"></div>
+</body>
+<script src="js/jquery2.2.4.js"></script>
+<script src="js/load.js"></script>
+<script src="js/ajax.js"></script>
+<script>
+    class Sylist{
+        constructor(){
+            this.glt = document.querySelector(".fdj");
+            this.url = "http://localhost/zhg/data/goods.json";
+            this.load()
+        }
+        load(){
+            var that = this;
+            ajaxGet(this.url,function(res){
+                that.res = JSON.parse(res);
+                that.display();
+            })
+        }
+        display(){
+            var str = "";
+            for(var i = 0;i<this.res.length;i++){
+                str = `<div class="fdj_d"></div>
+                            <div class="fdjimg margin">
+                                <div class="xbox">
+                                    <img src="${this.res[i].url}" alt="">
+                                    <p></p>
+                                    <span></span>
+                                </div>
+                                <div class="dbox">
+                                    <img src="${this.res[i].url}" alt="">
+                                </div>
+                                <ul class="zbox">
+                                    <li id="btn1"><img src="${this.res[i].url}" alt=""></li>
+                                    <li id="btn2"><img src="${this.res[i].list1}" alt=""></li>
+                                </ul>
+                                <div class="goodsjs">
+                                    <ul>
+                                        <li>
+                                            <h2>${this.res[i].name}</h2>
+                                        </li>
+                                        <li>
+                                            <div>
+                                                <b>
+                                                    ￥
+                                                    <span>${this.res[i].price}</span>
+                                                </b>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <div class="gj1 clear">
+                                        <div>赠&nbsp;&nbsp;&nbsp;品：&nbsp;&nbsp;&nbsp;</div>
+                                        <ul>
+                                            <li>
+                                                <img src="./images/xq1.jpg" alt="">
+                                                <a href="">锐思（Recci） iPhone6.5寸手机壳 iPhone6.5清逸系列</a>
+                                            </li>
+                                            <li>
+                                                <img src="./images/xq2.jpg" alt="">
+                                                <a href="">触宝（Zupool） iPhone6.5寸AK系列钢化玻璃膜 02-ZP-AP-IP(6.5)-AK</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="gj2 clear">
+                                        <div>机身颜色</div>
+                                        <ul>
+                                            <li>
+                                                <img src="./images/list1.jpg" alt="">
+                                            </li>
+                                            <li>
+                                                <img src="./images/list2.jpg" alt="">
+                                            </li>
+                                            <li>
+                                                <img src="./images/list3.jpg" alt="">
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="gj3 clear">
+                                        <div>选择容量</div>
+                                        <i>64GB</i>
+                                    </div>
+                                    <div class="gj4 clear">
+                                        <div>数量&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+                                        <span>
+                                            <a href="##" class="gj4_l">-</a>
+                                            <input readonly ="readonly" value="1">
+                                            <a href="##" class="gj4_r">+</a>
+                                        </span>
+                                    </div>
+                                    <div class="gj5 clear">
+                                        <img src="./images/x4.png" alt="">
+                                        <span>顺丰、德邦、顺电配送</span>
+                                        <img src="./images/x5.png" alt="">
+                                        <span>订单满200元<em>花呗3期免息</em>、包邮</span>
+                                    </div>
+                                    <div class="gj6">
+                                        <p>${this.res[i].tip}</p>
+                                        <p>${this.res[i].tip}</p>
+                                        <p>${this.res[i].tip}</p>
+                                        <p>${this.res[i].tip}</p>
+                                        <p>${this.res[i].tip}</p>
+                                    </div>
+                                    <div class="gj7">
+                                        <input type="button" value="立即购买" id="gm">
+                                        <input type="button" value="加入购物车"id="jcar">
+                                    </div>
+                                </div>
+                            </div>`
+            }
+            this.glt.innerHTML = str;
+            this.car()
+            new Fdj();
+        }
+        car(){
+            $(".glt").find("li").hover(function(){
+                $(this).children().not(".glb1").hide()
+                $(this).find(".box2").show()
+            },function(){
+                $(this).children().show()
+                $(this).find(".box2").hide()
+            })
+        }
+    }
+    new Sylist();
+
+
+
+
+
+
+
+
+
+
+    function Fdj(){
+        console.log(1)
+        this.xbox = document.querySelector(".xbox");
+        this.span = document.querySelector(".xbox span");
+        this.dbox = document.querySelector(".dbox");
+        this.img = document.querySelector(".dbox img");
+        this.addEvent();
+    }
+    Fdj.prototype.init = function(){
+        this.span.style.width = this.dbox.offsetWidth / this.img.offsetWidth * this.xbox.offsetWidth +"px";
+        this.span.style.height = this.dbox.offsetHeight / this.img.offsetHeight * this.xbox.offsetHeight +"px";
+    }
+    Fdj.prototype.addEvent = function(){
+        var that =this;
+        this.xbox.addEventListener("mouseover",function(){
+            that.over();
+            that.init();
+        })
+        this.xbox.addEventListener("mouseout",function(){
+            that.out();
+        })
+        this.xbox.addEventListener("mousemove",function(){
+            that.move();
+        })
+    }
+    Fdj.prototype.over = function(){
+        this.span.style.display = "block";
+        this.dbox.style.display = "block";
+    }
+    Fdj.prototype.out = function(){
+        this.span.style.display = "none";
+        this.dbox.style.display = "none";
+    }
+    Fdj.prototype.move = function(eve){
+        var e = eve || window.event;
+        var l = e.offsetX - this.span.offsetWidth/2;
+        var t = e.offsetY - this.span.offsetHeight/2;
+        var r = this.xbox.offsetWidth - this.span.offsetWidth;
+        var b = this.xbox.offsetHeight - this.span.offsetHeight;
+        if(l<0){
+            l=0;
+        }
+        if(t<0){
+            t=0;
+        }
+        if(l>r){
+            l=r;
+        }
+        if(t>b){
+            t=b;
+        }
+        this.span.style.left = l + "px";
+        this.span.style.top = t + "px";
+        var x = l/r;
+        var y = t/b;
+        this.img.style.left = -x * (this.img.offsetWidth - this.dbox.offsetWidth) + "px";
+        this.img.style.top = -y * (this.img.offsetHeight - this.dbox.offsetHeight) + "px";
+    }
+    
+    // var btn1 = document.querySelector("#btn1");
+    // var btn2 = document.querySelector("#btn2");
+    // var btn3 = document.querySelector("#btn3");
+    // var img1 = document.querySelector(".xbox img");
+    // var img2 = document.querySelector(".dbox img");
+    // btn1.onclick = function(){
+    //     img1.src = "./images/goods1.jpg";
+    //     img2.src="./images/goods1.jpg";
+    // }
+    // btn2.onclick = function(){
+    //     img1.src = "./images/goods11.jpg";
+    //     img2.src="./images/goods11.jpg";
+    // }
+    
+</script>
+</html>
